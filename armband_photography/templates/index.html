@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    
+    
+    <title>Armband Nature Photography</title>
+
+    <link id="css-link" href="/static/app.css" rel="stylesheet" type="text/css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js" integrity="sha512-aMGMvNYu8Ue4G+fHa359jcPb1u+ytAF+P2SCb+PxrjCdO3n3ZTxJ30zuH39rimUggmTwmh2u7wvQsDTHESnmfQ==" crossorigin="anonymous"></script>
+    <script src="static/app.js"></script>
+
+</head>
+<body>
+
+    <div class="tiledBackground"></div>
+    <h1>Armband Nature Photography</h1>
+    <!-- <h2><img id=image src="/static/gaming.jpg" alt="alt text"/></h2> -->
+    <h2><img id=video src="http://192.168.1.13:8081/" onerror="reloadPage()" alt="Waiting for video..."/></h2>
+
+    <p>
+        <div class="button-container">
+        <button class="button" onclick="btnPressed()">Take a picture remotely</button>
+        <h3 id=randNum>  </h3>
+    </div>
+
+    <div class="button-container">
+        <button class="button" onclick="btnBuzzer()">Turn shutter sound On/Off</button>
+        <h3 id=buzzerOn>  </h3>
+    </div>
+
+    <h4>
+        <form id="theForm">
+            <label for="label1">Adjust the brightness of the flashlight, from 0-100:  </label>
+            <input type="text" id="label1" name="label1"><br><br>
+            <button class="button" onclick="btnLight()">Enter</button>
+        </form>
+    </h4>
+    
+        <h9 id=lightness>  </h9>
+
+        <h2><img src="static/photo.jpg" alt="Take a picture!"/></h2>
+
+
+
+        <!-- <h6>Stored Images</h6> -->
+
+<!-- JavaScript code to list and display images -->
+<!-- <script>
+    // Function to fetch and display images in the folder
+    function displayImages() {
+        // Specify the path to the folder containing images
+        var folderPath = 'images/';
+
+        // Fetch a list of images in the folder
+        fetchImages(folderPath);
+    }
+
+    // Function to fetch images from the specified folder
+    function fetchImages(folderPath) {
+        // Fetch images using an XMLHttpRequest
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', folderPath, true);
+
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                // Parse the list of images
+                var images = xhr.responseText.split('\n');
+
+                // Display each image
+                displayImageList(images);
+            } else {
+                console.error('Failed to fetch images. Status code: ' + xhr.status);
+            }
+        };
+
+        xhr.send();
+    }
+
+    // Function to display a list of images
+    function displayImageList(images) {
+        var imageContainer = document.createElement('div');
+
+        // Loop through each image and create an <img> element
+        images.forEach(function (image) {
+            if (image.trim() !== '') {
+                var imgElement = document.createElement('img');
+                imgElement.src = image.trim();
+                imgElement.style.width = '150px'; // Adjust the width as needed
+                imgElement.style.margin = '5px'; // Add margin between images
+
+                // Append the image to the container
+                imageContainer.appendChild(imgElement);
+            }
+        });
+
+        // Append the container to the body
+        document.body.appendChild(imageContainer);
+    }
+
+    // Call the displayImages function when the page is loaded
+    window.onload = function () {
+        displayImages();
+    };
+</script> -->
+
+
+
+
+</body>
+</html>
